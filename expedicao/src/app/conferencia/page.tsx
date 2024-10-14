@@ -16,6 +16,9 @@ export default function Conferencia() {
   const nfInputRef = useRef<HTMLInputElement>(null);
   const etiquetaInputRef = useRef<HTMLInputElement>(null);
 
+  const [nfBipado, setNfBipado] = useState(''); // Estado para o número da NF bipado
+  const [etiquetaBipado, setEtiquetaBipado] = useState(''); // Estado para o número da etiqueta bipado
+
   const handleNfKeyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNfKey(e.target.value);
     if (e.target.value.length === 44) {
@@ -41,6 +44,8 @@ export default function Conferencia() {
     if (nfNumero === etiquetaNumero) {
       setMensagem('OK');
       setBipados((prevBipados) => prevBipados + 1);
+      setNfBipado(nfNumero); // Atualiza o número da NF bipado
+      setEtiquetaBipado(etiquetaNumero); // Atualiza o número da etiqueta bipada
 
       const existeLog = log.find((item) => item.nf === nfNumero);
       if (!existeLog) {
@@ -76,21 +81,25 @@ export default function Conferencia() {
   };
 
   const resetarConferencia = () => {
-    setNfKey('');
-    setEtiqueta('');
-    setVolumes(0);
-    setBipados(0);
-    setMensagem('');
+    setNfKey(''); // Reseta o número da NF
+    setEtiqueta(''); // Reseta o número da etiqueta
+    setVolumes(0); // Reseta a quantidade de volumes
+    setBipados(0); // Reseta a quantidade de volumes bipados
+    setMensagem(''); // Reseta a mensagem
+    setNfBipado(''); // Reseta o número da NF bipado
+    setEtiquetaBipado(''); // Reseta o número da etiqueta bipada
   };
 
   const iniciarNovaNF = () => {
-    setNfKey('');
-    setEtiqueta('');
-    setVolumes(0);
-    setBipados(0);
-    setMensagem('');
-    nfInputRef.current?.focus();
-    setNovaNF(false);
+    setNfKey(''); // Reseta o número da NF
+    setEtiqueta(''); // Reseta o número da etiqueta
+    setVolumes(0); // Reseta a quantidade de volumes
+    setBipados(0); // Reseta a quantidade de volumes bipados
+    setMensagem(''); // Reseta a mensagem
+    setNfBipado(''); // Reseta o número da NF bipado
+    setEtiquetaBipado(''); // Reseta o número da etiqueta bipada
+    nfInputRef.current?.focus(); // Foca no input da NF
+    setNovaNF(false); // Esconde o botão de bipar nova NF
   };
 
   const gerarPDF = () => {
@@ -128,6 +137,8 @@ export default function Conferencia() {
   return (
     <div id="main-container">
       <div id="content">
+        <img src="/logo.png" alt="Logo" style={{ width: '200px', height: 'auto' }} />
+        <br />
         <h1 id="title">Conferência de Expedição</h1>
 
         <div className="input-group">
@@ -146,6 +157,10 @@ export default function Conferencia() {
             value={nfKey}
             onChange={handleNfKeyChange}
           />
+          {/* Exibir número da NF bipado abaixo do input */}
+          {nfBipado && (
+            <p>NF:{nfBipado}</p>
+          )}
         </div>
 
         <div className="input-group">
@@ -155,6 +170,10 @@ export default function Conferencia() {
             value={etiqueta}
             onChange={handleEtiquetaChange}
           />
+          {/* Exibir número da etiqueta bipado abaixo do input */}
+          {etiquetaBipado && (
+            <p>Etiqueta:{etiquetaBipado}</p>
+          )}
         </div>
 
         <p id="mensagem" className={mensagem === 'OK' ? 'sucesso' : 'erro'}>

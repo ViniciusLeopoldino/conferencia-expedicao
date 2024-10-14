@@ -14,7 +14,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #09978b
+  background-color: #ffffff
 }
 
 /* Container principal */
@@ -25,12 +25,12 @@ body {
   min-height: 100vh; /* Ocupa toda a altura da tela */
   padding: 20px; /* Espaçamento interno */
   margin: 0 auto; /* Centraliza o container */
-  background-color: #ffffff !important; /* Cor de fundo do container */
+  background-color: #059c88 !important; /* Cor de fundo do container */
 }
 
 /* Estilos do conteúdo */
 .content {
-  background-color: #ffffff; /* Cor de fundo do container */
+  background-color: #059c88; /* Cor de fundo do container */
   border-radius: 8px; /* Bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
   padding: 40px; /* Espaçamento interno do conteúdo */
@@ -61,7 +61,7 @@ div {
 input {
   margin-bottom: 1.5rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 2px solid #059c88;
   border-radius: 15px;
   font-size: 1rem;
   width: 100%; /* Garante que os inputs ocupem toda a largura */
@@ -77,8 +77,8 @@ label {
 
 /* Botões */
 button {
-  background-color: #ffffff; /* Cor de fundo do botão */
-  color: #000000; /* Cor do texto do botão */
+  background-color: #059c88; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto do botão */
   padding: 10px 15px; /* Espaçamento interno do botão */
   border: none; /* Remove a borda padrão */
   border-radius: 5px; /* Bordas arredondadas do botão */
