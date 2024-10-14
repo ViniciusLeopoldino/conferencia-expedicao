@@ -88,7 +88,7 @@ export default function Conferencia() {
         <h1 className="text-2xl font-bold text-center mb-4">Conferência de Expedição</h1>
 
         <div className="mb-4">
-          <label className="block text-gray-700">Número de Volumes:</label>
+          <label className="block text-gray-700">Quantidade de Volumes:</label>
           <input
             type="number"
             className="mt-1 p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
