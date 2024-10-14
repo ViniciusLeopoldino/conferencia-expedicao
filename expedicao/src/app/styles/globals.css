@@ -8,13 +8,13 @@
 /* Estilização do corpo */
 body {
   font-family: Arial, sans-serif; /* Fonte padrão */
-  background-color: #09978b; /* Cor de fundo da página */
-
+  /* background-color: #ffffff; Cor de fundo da página */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  background-color: #09978b
 }
 
 /* Container principal */
@@ -25,6 +25,7 @@ body {
   min-height: 100vh; /* Ocupa toda a altura da tela */
   padding: 20px; /* Espaçamento interno */
   margin: 0 auto; /* Centraliza o container */
+  background-color: #ffffff !important; /* Cor de fundo do container */
 }
 
 /* Estilos do conteúdo */
@@ -46,9 +47,8 @@ h1 {
 
 p {
   margin: 10px 0;
-  color: #333; /* Cor do texto */
+  color: #000000; /* Cor do texto */
 }
-
 
 /* Estilos para o layout da página */
 div {
@@ -64,24 +64,59 @@ input {
   border: 1px solid #ccc;
   border-radius: 15px;
   font-size: 1rem;
-  /* width: 100%; */
+  width: 100%; /* Garante que os inputs ocupem toda a largura */
+}
+
+/* Estilos para label */
+label {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 /* Botões */
 button {
-  background-color: #09978b; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
+  background-color: #ffffff; /* Cor de fundo do botão */
+  color: #000000; /* Cor do texto do botão */
   padding: 10px 15px; /* Espaçamento interno do botão */
   border: none; /* Remove a borda padrão */
   border-radius: 5px; /* Bordas arredondadas do botão */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  font-size: 1rem; /* Tamanho da fonte */
+  width: 100%; /* Garante que o botão ocupe toda a largura */
+  margin-top: 1rem; /* Espaçamento superior */
 }
 
 button:hover {
   background-color: #00635a; /* Cor de fundo do botão ao passar o mouse */
 }
 
+/* Mensagem de status */
+p.text-green {
+  color: #28a745; /* Cor verde para mensagens de sucesso */
+}
+
+p.text-red {
+  color: #dc3545; /* Cor vermelha para mensagens de erro */
+}
+
 /* Listas */
 ul {
   padding-left: 20px; /* Espaçamento à esquerda das listas */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+
+  h1 {
+    font-size: 20px; /* Diminui o tamanho da fonte do título */
+  }
+
+  input, button {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte para inputs e botões */
+  }
 }
