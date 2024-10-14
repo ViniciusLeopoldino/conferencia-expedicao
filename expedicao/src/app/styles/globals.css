@@ -1,0 +1,62 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização do corpo */
+body {
+  font-family: Arial, sans-serif; /* Ou qualquer fonte que você preferir */
+  background-color: #f8f9fa; /* Cor de fundo da página */
+}
+
+/* Container principal */
+.main-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Ocupa toda a altura da tela */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilos do conteúdo */
+.content {
+  background-color: #ffffff; /* Cor de fundo do container */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  padding: 40px; /* Espaçamento interno do conteúdo */
+  width: 100%; /* Faz o container ocupar toda a largura */
+  max-width: 600px; /* Largura máxima do container */
+}
+
+/* Estilo de texto */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o texto do título */
+}
+
+p {
+  margin: 10px 0;
+  color: #333; /* Cor do texto */
+}
+
+/* Botões */
+button {
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 15px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Listas */
+ul {
+  padding-left: 20px; /* Espaçamento à esquerda das listas */
+}
