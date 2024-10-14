@@ -54,7 +54,7 @@ export default function Conferencia() {
     const doc = new jsPDF();
 
     const logo = new Image();
-    logo.src = '/logo.png'; // Altere para o caminho do seu logo
+    logo.src = '/logo.png'; // logo
     logo.onload = () => {
       doc.addImage(logo, 'PNG', 10, 10, 50, 20);
 
