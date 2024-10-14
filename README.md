@@ -14,17 +14,17 @@ Esta aplicação facilita a conferência de expedição, permitindo a validaçã
 - Geração de PDF: jsPDF
 
 # Como Executar o Projeto
-
-```1. Clone o repositório:
+1. Clone o repositório:
+```
 git clone <URL-do-repositório>
 cd <nome-do-repositório>
 ```
-
-```2. Instale as dependências:
+2. Instale as dependências:
+```
 npm install
 ```
-
-```3. Inicie o servidor de desenvolvimento:
+3. Inicie o servidor de desenvolvimento:
+```
 npm run dev
 ```
 
